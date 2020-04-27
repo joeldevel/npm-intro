@@ -1,0 +1,31 @@
+* What it the package.json?
+is a file that contains things in json format. things means configuration stuff
+* In the case of npm this file has to contain some properties.
+Example of package.json:
+  {
+    "name" : "project X"
+  }
+this define a name property
+Another properties could be:
+  version,
+  description,
+  scripts,
+  dependencies,
+  dev-dependencies
+and so on.
+
+In case you want to create a npm package and publish it,
+there are some properties you should define in the package.json.
+more on this here: https://nodejs.dev/the-package-json-guide
+
+About package-lock.json file
+  The package-lock.json sets your currently installed version
+  of each package in stone, and npm will use those exact versions
+  when running npm install.
+This is to avoid version problems when trying to run npm install
+ when the repository is cloned and things like that.
+
+About dev-dependencies:
+When a package is needed just for development sake (testing, or some transpiler)
+must be installed with --save-dev flag or -D, wich means they are going to be
+ignored if in production you run npm install --production
